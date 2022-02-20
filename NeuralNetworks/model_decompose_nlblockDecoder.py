@@ -5,8 +5,8 @@ import torch.optim as optim
 import torchvision.models.vgg as vgg
 from torchvision.ops import roi_pool
 
-from model_DVG import Pose_to_Image as Pose_to_Image_DVG
-from model_decompose_dilate import Pose_to_Image as Pose_to_Image_SinglePath
+from NeuralNetworks.model_DVG import Pose_to_Image as Pose_to_Image_DVG
+from NeuralNetworks.model_decompose_dilate import Pose_to_Image as Pose_to_Image_SinglePath
 from PretrainedNetwork.resnet import BasicBlock
 
 
