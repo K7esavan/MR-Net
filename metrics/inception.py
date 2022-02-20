@@ -3,6 +3,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torchvision import models
 
+# Empty line remove it later
+
 try:
     from torchvision.models.utils import load_state_dict_from_url
 except ImportError:
