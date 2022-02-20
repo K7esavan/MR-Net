@@ -51,7 +51,7 @@ def produce_ma_mask(kp_array, point_radius=4):
 def ssim(img1, img2):
     return measure.compare_ssim(img1, img2, multichannel=True, win_size=11)
 
-dataset = 'clean_penn'
+dataset = 'clean_bbc'
 # dataset = 'market1501'
 root = '/content/PGIS/result_images'
 target_root = os.path.join(root, dataset, 'target')
