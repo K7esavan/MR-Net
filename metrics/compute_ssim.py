@@ -54,12 +54,14 @@ def ssim(img1, img2):
 dataset = 'clean_bbc'
 # dataset = 'market1501'
 root = '/content/PGIS/result_images'
-target_root = os.path.join(root, dataset, 'target')
+# target_root = os.path.join(root, dataset, 'target')
+target_root = os.path.join(root, dataset, 'try_lr0.0005_recurrent3_lambda15_lambda21_withoutROI')
 models = os.listdir(os.path.join(root, dataset))
 seg_root = '/content/drive/MyDrive/DatasetCleanBBC/{}/Images/seg'.format(dataset)
 
-file_list = os.listdir(os.path.join(root, dataset, 'target'))
-all_poses = pickle.load(open(os.path.join('/home/xuchengming/XCM/Datasets/{}/Label/pose_label.pkl').format(dataset), 'rb'), encoding='latin1')
+# file_list = os.listdir(os.path.join(root, dataset, 'target'))
+file_list = os.listdir(os.path.join(root, dataset, 'try_lr0.0005_recurrent3_lambda15_lambda21_withoutROI'))
+all_poses = pickle.load(open(os.path.join('/content/drive/MyDrive/DatasetCleanBBC/{}/Label/pose_label.pkl').format(dataset), 'rb'), encoding='latin1')
 import pickle
 scores = {}
 masked_scores = {}
