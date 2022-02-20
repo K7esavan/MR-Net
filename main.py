@@ -20,7 +20,7 @@ parser.add_argument('-l1', '--lambda1', type=float, default=5, help="learning ra
 parser.add_argument('-l2', '--lambda2', type=float, default=1, help="learning rate")
 parser.add_argument('-l3', '--lambda3', type=float, default=0.5, help="learning rate")
 parser.add_argument('-r', '--recurrent', type=int, default=3, help='number of recurrent')
-parser.add_argument('-d', '--dataset', default='Penn_Action', help='dataset')
+parser.add_argument('-d', '--dataset', default='clean_bbc', help='dataset')
 parser.add_argument('-R', '--roi', action='store_true', help="use ROI split")
 parser.add_argument('-f', '--finetune', action='store_true', help="use pretrained model")
 parser.add_argument('-m', '--model', help="finetune model path")
