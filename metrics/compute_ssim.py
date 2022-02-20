@@ -49,12 +49,12 @@ def produce_ma_mask(kp_array, point_radius=4):
 def ssim(img1, img2):
     return compare_ssim(img1, img2, multichannel=True, win_size=11)
 
-dataset = 'Penn_Action'
+dataset = 'clean_penn'
 dataset = 'market1501'
-root = '/home/xuchengming/XCM/Previous-Works/poseguide-TIP2020/result_images'
+root = '/content/PGIS/result_images'
 target_root = os.path.join(root, dataset, 'target')
 models = os.listdir(os.path.join(root, dataset))
-seg_root = '/home/xuchengming/XCM/Datasets/{}/Images/seg'.format(dataset)
+seg_root = '/content/drive/MyDrive/DatasetCleanBBC/{}/Images/seg'.format(dataset)
 
 file_list = os.listdir(os.path.join(root, dataset, 'target'))
 all_poses = pickle.load(open(os.path.join('/home/xuchengming/XCM/Datasets/{}/Label/pose_label.pkl').format(dataset), 'rb'), encoding='latin1')

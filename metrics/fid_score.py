@@ -259,8 +259,8 @@ def calculate_fid_given_paths(paths, batch_size, cuda, dims):
 if __name__ == '__main__':
     args = parser.parse_args()
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
-    root = '/home/xuchengming/XCM/Previous-Works/poseguide-TIP2020/result_images/'
-    dataset = 'market1501'
+    root = '/content/PGIS/result_imagesa'
+    dataset = 'clean_bbc'
     models = os.listdir(os.path.join(root, dataset))
 
     target_path = os.path.join(root, dataset, 'target')
