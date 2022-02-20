@@ -1,12 +1,14 @@
-# Pose-Guided Person Image Synthesis in the Non-iconic Views
+# Pose-Guided Person Image Synthesis
 
-This is the code for TIP paper 'Pose-Guided Person Image Synthesis in the Non-iconic Views'. To run this code, you need to do as follows,
+This is mofied version of 'Pose-Guided Person Image Synthesis in the Non-iconic Views'. 
+To run this code, you need to do as follows,
 
 ## Prepare the environment
 This code needs pytorch 1.4.0.
 
 ## Download Datasets
-We provide the processed frames, poses and segmentations for [**Penn Action**](https://drive.google.com/file/d/1BIypR2L9p341aqnuFPTbrkBcle_1uZWc/view?usp=sharing) and [**BBC-Pose**](https://1drv.ms/u/s!AnBt_uRlzjtBiA47hkFb_LFvCgPZ?e=q1ZKyf). Market-1501 is the same as the one used in [PATN](https://github.com/tengteng95/Pose-Transfer).
+We provide the processed frames, poses and segmentations for [**Penn Action**](https://drive.google.com/file/d/1BIypR2L9p341aqnuFPTbrkBcle_1uZWc/view?usp=sharing) and [**BBC-Pose**](https://1drv.ms/u/s!AnBt_uRlzjtBiA47hkFb_LFvCgPZ?e=q1ZKyf). 
+Market-1501 is the same as the one used in [PATN](https://github.com/tengteng95/Pose-Transfer).
 
 ## Train
 ```{python}
