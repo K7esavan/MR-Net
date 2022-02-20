@@ -10,7 +10,7 @@ We provide the processed frames, poses and segmentations for [**Penn Action**](h
 
 ## Train
 ```{python}
-python pose_to_image.py -n debug -R -nl -dp -d {Penn_Action/bbcpose/market1501} -dr {your_data_root}
+python main.py -n debug -R -nl -dp -d {Penn_Action/bbcpose/market1501} -dr {your_data_root}
 ```
 
 ## Generate
