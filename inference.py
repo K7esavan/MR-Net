@@ -9,7 +9,7 @@ import cv2
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-n', '--name', help="name of model")
+parser.add_argument('-n', '--name', default='try_lr0.0005_recurrent3_lambda15_lambda21_withoutROI', help="name of model")
 parser.add_argument('-dr', '--root', default='/content/drive/MyDrive/DatasetCleanBBC', help="data root")
 parser.add_argument('-d', '--dataset', default='clean_bbc',help='dataset name')
 parser.add_argument('-r', '--recurrent', type=int, default=3, help='num recurrent')
