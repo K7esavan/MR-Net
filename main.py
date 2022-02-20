@@ -193,3 +193,5 @@ torch.save(model.state_dict(), os.path.join('./models', model_name, '_'.join([ar
 print("total time:" + str(time.time() - start))
 if 1:
     writer.close()
+
+print('hi')
