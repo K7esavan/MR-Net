@@ -14,7 +14,7 @@ torch.backends.cudnn.benchmark = True
 # All command line parameters for the project
 parser = argparse.ArgumentParser()
 parser.add_argument('-n', '--name', default='try', help="name of model")
-parser.add_argument('-dr', '--root', default='/data', help="data root")
+parser.add_argument('-dr', '--root', default='/content/drive/MyDrive/DatasetCleanBBC', help="data root")
 parser.add_argument('-l', '--lr', type=float, default=5e-4, help="learning rate")
 parser.add_argument('-l1', '--lambda1', type=float, default=5, help="learning rate")
 parser.add_argument('-l2', '--lambda2', type=float, default=1, help="learning rate")
