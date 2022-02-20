@@ -1,6 +1,8 @@
 import numpy as np
 import os
-from skimage.measure import compare_ssim
+# from skimage.measure import compare_ssim
+
+from skimage import measure
 import skimage.io as sio
 from skimage import transform
 import cv2
@@ -47,7 +49,7 @@ def produce_ma_mask(kp_array, point_radius=4):
     return mask.astype(int)
 
 def ssim(img1, img2):
-    return compare_ssim(img1, img2, multichannel=True, win_size=11)
+    return measure.compare_ssim(img1, img2, multichannel=True, win_size=11)
 
 dataset = 'clean_penn'
 dataset = 'market1501'
@@ -93,13 +95,13 @@ for idx, img in enumerate(file_list):
         else:
             pred_img = sio.imread(os.path.join(root, dataset, model, img.split('.')[0]+'.jpg'))
         crop_pred = pred_img * pose_img
-        ssim = compare_ssim(target_img, pred_img, gaussian_weights=True, sigma=1.5,
+        ssim = measure.compare_ssim(target_img, pred_img, gaussian_weights=True, sigma=1.5,
                                     use_sample_covariance=False, multichannel=True,
                                                                 data_range=pred_img.max() - pred_img.min())
 
 
         scores[model].append(ssim)
-        mask_ssim = compare_ssim(crop_target, crop_pred, gaussian_weights=True, sigma=1.5,
+        mask_ssim = measure.compare_ssim(crop_target, crop_pred, gaussian_weights=True, sigma=1.5,
                                     use_sample_covariance=False, multichannel=True,
                                                                 data_range=crop_pred.max() - crop_pred.min())
         masked_scores[model].append(mask_ssim)
