@@ -108,8 +108,8 @@ class PoseDataset(torch.utils.data.Dataset):
         return len(self.split)
 
 def tensor_to_image(tensor):
-    tensor = tensor*255
-    tensor = np.array(tensor)
+    # tensor = tensor*255
+    # tensor = np.array(tensor)
     if np.ndim(tensor)>3:
         assert tensor.shape[0] == 1
         tensor = tensor[0]
