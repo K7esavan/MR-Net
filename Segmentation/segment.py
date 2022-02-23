@@ -107,19 +107,15 @@ class PoseDataset(torch.utils.data.Dataset):
     def __len__(self):
         return len(self.split)
 
-def displayimage(imgs):
-    to_pil = torchvision.transforms.ToPILImage()
-    image = to_pil(imgs[0])
-    image.show()
-    #    image = Image.fromarray(img, 'RGB')
-    #    image.save('im.png')
-    #    image.show()
-    #    #plt.imshow(img.permute(1, 2, 0))
+def displayimage(images):
+    grid = torchvision.utils.make_grid(images, nrow=10)
+    plt.figure(figsize=(15,15))
+    plt.imshow(np.transpose(grid, (1,2,0)))
 
 def main():
     root = "/content/drive/MyDrive/DatasetCleanBBC/clean_bbc"
     train_data = PoseDataset(root, mode='train')
-    test_data = PoseDataset(root, mode='test')
+    image_loader = DataLoader(train_data)
     displayimage(train_data[0])
 
 
