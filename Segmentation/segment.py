@@ -115,7 +115,11 @@ def displayimage(images):
 def main():
     root = "/content/drive/MyDrive/DatasetCleanBBC/clean_bbc"
     train_data = PoseDataset(root, mode='train')
-    displayimage(train_data[0])
+    tup = train_data[0]
+    lst = []
+    for elt in tup:
+        lst.append(elt)
+    displayimage(lst)
 
 
 if __name__ == "__main__":
