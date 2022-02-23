@@ -115,7 +115,6 @@ def displayimage(images):
 def main():
     root = "/content/drive/MyDrive/DatasetCleanBBC/clean_bbc"
     train_data = PoseDataset(root, mode='train')
-    image_loader = DataLoader(train_data)
     displayimage(train_data[0])
 
 
