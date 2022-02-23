@@ -117,7 +117,7 @@ def tensor_to_image(tensor):
 
 def displayimage(images):
     for img in images:
-        img = img.unsqueeze(0)
+        img = torch.tensor(img).unsqueeze(0)
         plt.imshow(transforms.ToPILImage()(img), interpolation="bicubic")
         # img = tensor_to_image(img)
         # img.show()
