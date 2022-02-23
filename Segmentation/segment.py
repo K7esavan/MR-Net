@@ -117,7 +117,7 @@ def tensor_to_image(tensor):
 
 def displayimage(images):
     for img in images:
-        plt.imshow(transforms.ToPILImage()(image), interpolation="bicubic")
+        plt.imshow(transforms.ToPILImage()(img), interpolation="bicubic")
         # img = tensor_to_image(img)
         # img.show()
 
