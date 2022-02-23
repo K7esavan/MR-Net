@@ -107,19 +107,24 @@ class PoseDataset(torch.utils.data.Dataset):
     def __len__(self):
         return len(self.split)
 
+def tensor_to_image(tensor):
+    tensor = tensor*255
+    tensor = np.array(tensor, dtype=np.uint8)
+    if np.ndim(tensor)>3:
+        assert tensor.shape[0] == 1
+        tensor = tensor[0]
+    return PIL.Image.fromarray(tensor)
+
 def displayimage(images):
-    grid = torchvision.utils.make_grid(images, nrow=10)
-    plt.figure(figsize=(15,15))
-    plt.imshow(np.transpose(grid, (1,2,0)))
+    for img in images:
+        img = tensor_to_image(img)
+        img.show()
 
 def main():
     root = "/content/drive/MyDrive/DatasetCleanBBC/clean_bbc"
     train_data = PoseDataset(root, mode='train')
     tup = train_data[0]
-    lst = []
-    for elt in tup:
-        lst.append(elt)
-    displayimage(lst)
+    displayimage(tup)
 
 
 if __name__ == "__main__":
