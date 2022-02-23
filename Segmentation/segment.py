@@ -109,9 +109,8 @@ class PoseDataset(torch.utils.data.Dataset):
 
 def displayimage(imgs):
     to_pil = torchvision.transforms.ToPILImage()
-    for img in imgs:
-        image = to_pil(img)
-        image.show()
+    image = to_pil(imgs[0])
+    image.show()
     #    image = Image.fromarray(img, 'RGB')
     #    image.save('im.png')
     #    image.show()
