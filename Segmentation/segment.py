@@ -117,8 +117,9 @@ def tensor_to_image(tensor):
 
 def displayimage(images):
     for img in images:
-        img = tensor_to_image(img)
-        img.show()
+        plt.imshow(transforms.ToPILImage()(image), interpolation="bicubic")
+        # img = tensor_to_image(img)
+        # img.show()
 
 def main():
     root = "/content/drive/MyDrive/DatasetCleanBBC/clean_bbc"
