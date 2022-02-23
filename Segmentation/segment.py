@@ -113,7 +113,7 @@ def tensor_to_image(tensor):
     if np.ndim(tensor)>3:
         assert tensor.shape[0] == 1
         tensor = tensor[0]
-    return PIL.Image.fromarray(tensor)
+    return Image.fromarray(tensor)
 
 def displayimage(images):
     for img in images:
