@@ -108,10 +108,11 @@ class PoseDataset(torch.utils.data.Dataset):
 
 def displayimage(imgs):
     for img in imgs:
-        image = Image.fromarray(img, 'RGB')
-        image.save('im.png')
-        image.show()
-        #plt.imshow(img.permute(1, 2, 0))
+        print(img)
+    #    image = Image.fromarray(img, 'RGB')
+    #    image.save('im.png')
+    #    image.show()
+    #    #plt.imshow(img.permute(1, 2, 0))
 
 def main():
     root = "/content/drive/MyDrive/DatasetCleanBBC/clean_bbc"
