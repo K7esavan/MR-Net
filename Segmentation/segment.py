@@ -7,6 +7,7 @@ import PIL.Image as Image
 import imageio
 import numpy as np
 import torch.utils.data
+import torchvision
 from torchvision import transforms
 import matplotlib.pyplot as plt
 
@@ -107,8 +108,10 @@ class PoseDataset(torch.utils.data.Dataset):
         return len(self.split)
 
 def displayimage(imgs):
+    to_pil = torchvision.transforms.ToPILImage()
     for img in imgs:
-        print(img)
+        image = to_pil(img)
+        image.show()
     #    image = Image.fromarray(img, 'RGB')
     #    image.save('im.png')
     #    image.show()
